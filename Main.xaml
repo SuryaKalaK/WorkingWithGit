@@ -118,7 +118,7 @@
       <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="885.6000000000001,1491.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="885.6000000000001,1665.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ugdm:GDriveLocalItem" Name="DownloadedFile" />
       <Variable x:TypeArguments="gadvd:File" Name="FileInfo" />
@@ -128,20 +128,21 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ugad:GoogleDriveApplicationScope ContinueOnError="{x:Null}" CredentialID="{x:Null}" CredentialSecret="{x:Null}" Timeout="{x:Null}" Account="Please select an account." ConnectionAccountName="suryakala5312@gmail.com" ConnectionId="d7a137e3-6ddd-468b-91c1-619972d0ad83" Connector="uipath-google-drive" DisplayName="Use Google Drive" sap:VirtualizedContainerService.HintSize="449.6,699.2" sap2010:WorkflowViewState.IdRef="GoogleDriveApplicationScope_1" UseConnectionService="True">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;Using Integration Service&quot;]" />
+    <ugad:GoogleDriveApplicationScope ContinueOnError="{x:Null}" CredentialID="{x:Null}" CredentialSecret="{x:Null}" Timeout="{x:Null}" Account="Please select an account." ConnectionAccountName="suryakala5312@gmail.com" ConnectionId="d7a137e3-6ddd-468b-91c1-619972d0ad83" Connector="uipath-google-drive" DisplayName="Use Google Drive" sap:VirtualizedContainerService.HintSize="483.2,699.2" sap2010:WorkflowViewState.IdRef="GoogleDriveApplicationScope_1" UseConnectionService="True">
       <ugad:GoogleDriveApplicationScope.Body>
         <ActivityAction x:TypeArguments="ugad:IGoogleDriveTarget">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ugad:IGoogleDriveTarget" Name="GoogleDrive" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,525.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,525.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uga:GetFileInfo ContinueOnError="{x:Null}" AuthScopesInvalid="False" DisplayName="Get File Info" DriveTarget="[GoogleDrive]" FileId="[UiPathEventObjectId]" sap:VirtualizedContainerService.HintSize="382.4,113.6" sap2010:WorkflowViewState.IdRef="GetFileInfo_1" Result="[FileInfo]" SupportsTeamDrives="False" />
-            <uga:DownloadFileConnections BrowserFileId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" File="{x:Null}" FileFriendlyName="{x:Null}" ManualEntryFileId="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" ConnectionId="d7a137e3-6ddd-468b-91c1-619972d0ad83" DisplayName="Download File" DownloadDocumentAs="Word" DownloadDrawingAs="Jpeg" DownloadPresentationAs="Ppt" DownloadSpreadsheetAs="Xlsx" FileInputMode="UrlOrId" sap:VirtualizedContainerService.HintSize="382.4,184.8" sap2010:WorkflowViewState.IdRef="DownloadFileConnections_1" ManualFileId="[UipathEventObjectId]" NewResult="[DownloadedFile]" UseConnectionService="True">
+            <uga:GetFileInfo ContinueOnError="{x:Null}" DriveTarget="{x:Null}" AuthScopesInvalid="False" DisplayName="Get File Info" FileId="[UiPathEventObjectId]" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="GetFileInfo_1" Result="[FileInfo]" SupportsTeamDrives="False" />
+            <uga:DownloadFileConnections BrowserFileId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" File="{x:Null}" FileFriendlyName="{x:Null}" ManualEntryFileId="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" ConnectionId="d7a137e3-6ddd-468b-91c1-619972d0ad83" DisplayName="Download File" DownloadDocumentAs="Word" DownloadDrawingAs="Jpeg" DownloadPresentationAs="Ppt" DownloadSpreadsheetAs="Xlsx" FileInputMode="UrlOrId" sap:VirtualizedContainerService.HintSize="416,184.8" sap2010:WorkflowViewState.IdRef="DownloadFileConnections_1" ManualFileId="[UipathEventObjectId]" NewResult="[DownloadedFile]" UseConnectionService="True">
               <uga:DownloadFileConnections.FileIdBackup>
                 <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID0" StoredValue="UrlOrId">
                   <usau:BackupSlot.BackupValues>
@@ -168,7 +169,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uga:DownloadFileConnections>
-            <ui:RenameFileX DisplayName="Rename File" FilePath="[DownloadedFile.ToString]" sap:VirtualizedContainerService.HintSize="382.4,167.2" sap2010:WorkflowViewState.IdRef="RenameFileX_1" KeepExtension="True" NewName="Is" />
+            <ui:RenameFileX DisplayName="Rename File" FilePath="[DownloadedFile.ToString]" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="RenameFileX_1" KeepExtension="True" NewName="Is" />
           </Sequence>
         </ActivityAction>
       </ugad:GoogleDriveApplicationScope.Body>
@@ -190,7 +191,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" Attachments="{x:Null}" ConnectionAccountName="{x:Null}" AttachmentInputMode="Builder" AttachmentPaths="{x:Null}" AuthScopesInvalid="False" Bcc="{x:Null}" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;This sent by an automation triggered by Integration Service.&lt;/SPAN&gt;&lt;/P&gt;&quot;)]" Cc="{x:Null}" ConnectionId="269db698-dd20-49c5-914f-79f1241dddf8" ContinueOnError="{x:Null}" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="382.4,504" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" ReplyTo="{x:Null}" SaveAsDraft="True" SingleAttachment="{x:Null}" Subject="{x:Null}" TextBody="{x:Null}" To="[New String(){&quot;suryakala5312@gmail.com&quot;}]" UseConnectionService="True">
+            <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" Subject="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;This sent by an automation triggered by Integration Service.&lt;/SPAN&gt;&lt;/P&gt;&quot;)]" ConnectionId="269db698-dd20-49c5-914f-79f1241dddf8" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="382.4,504" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="True" To="[New String(){&quot;suryakala5312@gmail.com&quot;}]" UseConnectionService="True">
               <uga:SendEmailConnections.ArgumentAttachments>
                 <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="4">
                   <InArgument x:TypeArguments="upr:IResource">[DownloadedFile]</InArgument>
